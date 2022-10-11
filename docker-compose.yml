@@ -1,0 +1,18 @@
+version: '3'
+services:
+  redis:
+    image: redis:5
+    ports:
+      - "6379:6379"
+  hello-express:
+    build:
+      context: .
+    command: "yarn start"
+    environment:
+      - AUTHENTICATION_STRATEGY=local
+      - SESSION_SECRET_DIR=./../session-secret
+      - SESSION_STORE=redis
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    ports:
+      - "9000:3000"
