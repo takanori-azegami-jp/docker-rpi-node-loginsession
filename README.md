@@ -1,4 +1,4 @@
-# docker-rpi-node-sessionpassport
+# docker-rpi-node-loginsession
 RaspberryPi(64bit)にDockerでNode/Express/Passportでログインとセッション発行する
 
 ## 参考サイト
